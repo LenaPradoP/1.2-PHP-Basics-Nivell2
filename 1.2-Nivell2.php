@@ -21,4 +21,32 @@ echo "S1.T2.N2 Ejercicio 1" .PHP_EOL;
 
         return $cost;
     }
+    echo "S1.T2.N2 Ejercicio 2" .PHP_EOL;
+        $chocolate = 3;
+        $gum = 5;
+        $caramel = 2;
+
+        echo "El total de la compra es de: ".PHP_EOL 
+            . calculateChocolate($chocolate) . " + " 
+            . calculateGum($gum) . " + "
+            . calculateCaramel($caramel) . " = "
+            . calculateTotal($chocolate, $gum, $caramel).PHP_EOL;
+
+        function calculateChocolate(int $chocolate) : float {
+            return $chocolate * 1;
+        }
+    
+        function calculateGum(int $gum) : float {
+            return $gum * 0.5;
+        }
+
+        function calculateCaramel(int $caramel) : float {
+            return $caramel * 1.5;
+        }
+
+        function calculateTotal(int $chocolate, int $gum, int $caramel) : float {
+            return calculateChocolate($chocolate) + calculateGum($gum) + calculateCaramel($caramel);
+        }
+
+
 ?>

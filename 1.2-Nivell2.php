@@ -2,22 +2,21 @@
 declare(strict_types = 1);
 
 echo "S1.T2.N2 Ejercicio 1" .PHP_EOL .PHP_EOL;
+define('MINIMUN_TIME', 3);
+define('STARTING_COST', 0.10);
+define('EXTRA_MINUTE_COST', 0.05);
 
 echo calculateCost(5);
 
 function calculateCost(float $callTime) : string {
-    define('MINIMUN_TIME', 3);
-    define('STARTING_COST', 0.10);
-    define('EXTRA_MINUTE_COST', 0.05);
-    
+
     if ($callTime <= 0) {
-        return "El tiempo de llamada no ha sido registrado".PHP_EOL ;
+        return "El tiempo de llamada no ha sido registrado" .PHP_EOL;
     } else if ($callTime <= 3) {
-        $finalCost = STARTING_COST;
+        return "El coste de la llamada es " . STARTING_COST . "€" .PHP_EOL;
     } else {
-        $finalCost = STARTING_COST + ($callTime - MINIMUN_TIME) * EXTRA_MINUTE_COST;
+        return "El coste de la llamada es " . (STARTING_COST + ($callTime - MINIMUN_TIME) * EXTRA_MINUTE_COST). "€" .PHP_EOL;
     }
-        return "El coste de la llamada es $finalCost" . '€.'.PHP_EOL .PHP_EOL ;
 }
 
 echo "S1.T2.N2 Ejercicio 2" .PHP_EOL .PHP_EOL;
